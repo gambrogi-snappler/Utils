@@ -76,7 +76,7 @@
 {# -------------------------------------------------- grid_headers -------------------------------------------------- #}
 {% block headers %}
     {% for column in grid.vars.columns %}
-        <th>{{ column.vars.label }}</th>
+        <th class="{{ column.vars.prefix ~ "_" ~ column.vars.name }}">{{ column.vars.label }}</th>
     {% endfor %}
 {% endblock %}
 {# -------------------------------------------------- grid_data -------------------------------------------------- #}

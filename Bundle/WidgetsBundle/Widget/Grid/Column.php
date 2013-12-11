@@ -9,8 +9,9 @@ class Column
 
     private $name;
     private $label;
+    private $prefix;
 
-    public function __construct($name, $label)
+    public function __construct($name, $label, $prefix)
     {
         $this->setName($name);
         $this->setLabel($label);
@@ -35,6 +36,15 @@ class Column
     {
         return $this->label;
     }
+    protected function setPrefix($value)
+    {
+        $this->prefix = $value;
+    }
+
+    public function getPrefix()
+    {
+        return $this->prefix;
+    }
 
     /**
      * Procesa una fila o conjunto de valores para generar el valor de una celda.
@@ -50,6 +60,7 @@ class Column
     {
         $view->set('label', $this->getLabel());
         $view->set('name', $this->getName());
+        $view->set('prefix', $this->getPrefix());
         $view->set('type', 'column');
 
         return $view;
