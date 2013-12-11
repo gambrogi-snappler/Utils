@@ -10,9 +10,9 @@ class ActionColumn extends TemplateColumn
     private $actions;
     private $dataFields = array();
 
-    public function __construct($name, $label)
+    public function __construct($name, $label, $prefix)
     {
-        parent::__construct($name, $label);
+        parent::__construct($name, $label, $prefix);
 
         $this->setActions(new \ArrayObject());
         $this->setBlockName('actioncolumn');

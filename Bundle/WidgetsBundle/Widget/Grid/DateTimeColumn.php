@@ -10,6 +10,7 @@ class DateTimeColumn extends Column
     {
         $view->set('label', $this->getLabel());
         $view->set('name', $this->getName());
+        $view->set('prefix', $this->getPrefix());
         $view->set('type', 'datetimecolumn');
 
         return $view;

@@ -11,7 +11,7 @@ class Column
     private $label;
     private $prefix;
 
-    public function __construct($name, $label, $prefix)
+    public function __construct($name, $label, $prefix="")
     {
         $this->setName($name);
         $this->setLabel($label);
