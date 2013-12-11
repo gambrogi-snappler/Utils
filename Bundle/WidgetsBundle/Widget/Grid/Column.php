@@ -15,6 +15,7 @@ class Column
     {
         $this->setName($name);
         $this->setLabel($label);
+        $this->setPrefix($prefix);
     }
 
     protected function setName($value)
