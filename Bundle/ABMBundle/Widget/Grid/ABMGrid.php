@@ -105,7 +105,7 @@ class ABMGrid extends Grid {
     }
 
     protected function initialize() {
-        $actionColumn = new ActionLinkColumn('actions', 'Acciones');
+        $actionColumn = new ActionLinkColumn('actions', 'Acciones', '');
         
         $actionColumn->setAction( 'update', array( 'label' => 'Modificar', 'route' => '', 'params' => array() ) )
                      ->setAction( 'delete', array( 'label' => 'Eliminar', 'route' => '', 'params' => array(), 'blockName' => 'SnappmindsUtilsABMBundleABMDeleteAction' ) )

@@ -10,7 +10,7 @@ class ActionColumn extends TemplateColumn
     private $actions;
     private $dataFields = array();
 
-    public function __construct($name, $label, $prefix)
+    public function __construct($name, $label, $prefix="")
     {
         parent::__construct($name, $label, $prefix);
 
