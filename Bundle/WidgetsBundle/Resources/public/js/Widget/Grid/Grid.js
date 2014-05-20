@@ -101,6 +101,8 @@ Snappminds.Utils.Widget.Grid.Grid.prototype.refresh = function(page)
 
             self.updatePaginator();
             self.updateStateInfo();
+
+            $(document).trigger('table-ready');
         }
     });
 }
