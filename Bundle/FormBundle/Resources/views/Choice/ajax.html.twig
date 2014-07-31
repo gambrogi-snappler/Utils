@@ -1,5 +1,1 @@
-[
-    {% for key, value in data %}
-        { 'id': '{{ key }}' , 'data': '{{ value }}' },
-    {% endfor %}
-]
+[{% for key, value in data %}{"id":"{{ key }}","data":"{{ value }}"}{% if not loop.last %},{% endif %}{% endfor %}]
